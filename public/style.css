@@ -1,0 +1,287 @@
+/* base styling */
+*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FAFAFA;
+}
+
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.5fr 0.6fr 0.4fr 0.7fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar"
+    "navbar2 navbar2 navbar2 navbar2 navbar2"
+    "sidebar main2 main2 main2 main2"
+    "sidebar main main main main"
+    "sidebar main main main main" 
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area:navbar;
+    padding: 0 10px;
+}
+.logo .bx-bar-chart-square{
+    font-size: 25px;
+}
+#search{
+    width: 450px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+}
+.settings .bx-cog,
+.questionmark .bx-question-mark,
+.profile .bx-user-circle{
+    font-size: 20px;
+}
+.nav2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    grid-area:navbar2;
+}
+.nav2 button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: slateblue;
+}
+.nav2 .addnew{
+    padding: 1px 12px;
+    border-radius: 15px;
+}
+.nav2 .addnew i{
+    font-size: 25px;
+}
+.nav2 .share{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.nav2 .share i{
+    font-size: 15px;
+}
+.nav2 .download{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.nav2 .download i{
+    font-size: 15px;
+}
+.nav2 .createalb{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.nav2 .createalb i{
+    font-size: 15px;
+}
+.nav2 .grp{
+    display: flex;
+    gap: 30px;
+}
+.nav2 .grp2{
+    display: flex;
+    gap: 30px;
+}
+.nav2 .sort{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.nav2 .sort i{
+    font-size: 15px;
+}
+.nav2 .details{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.nav2 .details i{
+    font-size: 15px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    align-items: center;
+    grid-area: sidebar;
+    
+}
+.sidebar2{
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+}
+.myfiles{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    
+}
+.myfiles i{
+    font-size: 15px;
+}
+.recent{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.recent i{
+    font-size: 15px;
+}
+.photos{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.photos i{
+    font-size: 15px;
+}
+.shared{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.shared i{
+    font-size: 15px;
+}
+.recycle{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.recycle i{
+    font-size: 15px;
+}
+.main{
+    background-color:white;
+    grid-area: main;
+}
+.main .name{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.main .name i{
+    font-size: 15px;
+}
+
+.main .cert{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.main .cert i{
+    font-size: 20px;
+    color: rgb(243, 243, 121);
+}
+.main .confi{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.main .confi i{
+    font-size: 20px;
+    color: rgb(243, 243, 121);
+}
+.main .fonts{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.main .fonts i{
+    font-size: 20px;
+    color: rgb(243, 243, 121);
+}
+.main .photoshop{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.main .photoshop i{
+    font-size: 20px;
+    color: rgb(243, 243, 121);
+}
+.main .workdoc{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.main .workdoc i{
+    font-size: 20px;
+    color: rgb(243, 243, 121);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+    padding: 8px;
+}
+td {
+    padding: 10px 8px;
+}
+
+th, td {
+    border-bottom: 1px solid lightgray;
+}
+.main2{
+    background-color:white;
+    grid-area: main2;
+    padding-top: 5px;
+    padding-left:10px ;
+}
+/* responsive design */
+
+@media only screen and (max-width:767px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.8fr;
+        grid-template-areas: 
+        "navbar"
+        "navbar2"
+        "sidebar"
+        "main"
+    }
+    .nav{
+        justify-content: flex-start;
+        gap: 40px;
+    }
+    #search{
+        width: 150px;
+    }
+    .nav2{
+        justify-content: flex-start;
+        font-size: 10px;
+    }
+    .nav2 button{
+        font-size: 10px;
+    }
+    .sidebar{
+        flex-direction: row;
+        padding: 0;
+    }
+    .sidebar2{
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+    } 
+}
