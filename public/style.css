@@ -12,14 +12,16 @@ body{
     display: grid;
     min-height: 100vh;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 0.5fr 0.6fr 0.4fr 0.7fr 1.5fr 1.5fr 1.5fr 1.5fr;
-    grid-gap: 5px;
+    grid-template-rows: 0.5fr 0.6fr 0.4fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-gap: 15px;
     grid-template-areas: 
     "navbar navbar navbar navbar navbar"
     "navbar2 navbar2 navbar2 navbar2 navbar2"
     "sidebar main2 main2 main2 main2"
-    "sidebar main main main main"
-    "sidebar main main main main" 
+     "sidebar content1 content1 content2 content2"
+    "sidebar content3 content3 main main"
+    /* "sidebar main main main main" */
+    /* "sidebar main main main main"  */
 }
 .nav{
     display: flex;
@@ -121,6 +123,18 @@ body{
     align-items: center;
     grid-area: sidebar;
     
+}
+#content1{
+    background-color:white;
+    grid-area: content1;
+}
+#content2{
+    background-color:white;
+    grid-area: content2;
+}
+#content3{
+    background-color:white;
+    grid-area: content3;
 }
 .sidebar2{
     display: flex;
